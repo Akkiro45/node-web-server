@@ -41,6 +41,12 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects'
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Error'
@@ -51,3 +57,5 @@ app.listen(port, (error) => {
   if (error) throw error;
   console.log(`Server is running on port ${port}.`);
 });
+
+// https://cryptic-spire-76716.herokuapp.com/
